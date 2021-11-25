@@ -1,7 +1,14 @@
+body{
+    padding-left: 5%;
+    padding-right: 5%;
+}
 h1{
     text-align: center;
     background-color: lightblue;
     /* margin: 10px; */
+}
+h5{
+    margin: 2%;
 }
 .subtitle{
     text-align: center;
@@ -16,4 +23,7 @@ h1{
     border-width: 10px;
     border-style: solid;
     border-radius: 12px;
+  }
+  right-text{
+      text-align: right;
   }
