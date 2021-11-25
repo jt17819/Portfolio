@@ -1,8 +1,19 @@
 h1{
     text-align: center;
     background-color: lightblue;
+    /* margin: 10px; */
 }
 .subtitle{
     text-align: center;
     font-size: 16px;
+    /* padding: 2px; */
 }
+.silver-box {
+    background-color: lightgray;
+      text-align: left;
+    margin: auto 5% auto 5%;
+    border-color: silver;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 12px;
+  }
