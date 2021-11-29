@@ -24,6 +24,6 @@ h5{
     border-style: solid;
     border-radius: 12px;
   }
-  right-text{
-      text-align: right;
+  #github-button{
+      justify-self: center;
   }
