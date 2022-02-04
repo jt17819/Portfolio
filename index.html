@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Josh Tang's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-          
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
+    <script defer src="script.js"></script>
+</head>
+
+<body id="body" class="light">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Portfolio</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link" href="#Education">About Me</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#Experience">Experience</a>
+                    <a class="nav-link" href="#Experience">Experience</a>
                 </li>
-              </ul>
-            </div>
-        </nav>
-        <div class="container mt-3 mb-2 border jumbotron-fluid">
-            <div class="container pt-2">
-                <h1 class="p-1">Josh Tang</h1>
-                <p class="subtitle">11 Malcolm Drive, Surbiton, Surrey, KT6 6QS</p>
-                <p class="subtitle">Mobile: 07759097416 | jt17819@alumni.bristol.ac.uk</p>
-                
-                <form action="https://github.com/jt17819" target="_blank">
-                    <button id="github-button" class="btn btn-dark btn-social btn-github text-center">
-                        <i class="fa fa-github"></i> Github
-                    </button>
-                </form>
-            </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Projects">Projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Theme
+                    </a>
+                    <div class="dropdown-menu">
+                      <button id="lightBtn" class="dropdown-item">Light</button>
+                      <button id="darkBtn" class="dropdown-item">Dark</button>
+                    </div>
+                  </li>
+            </ul>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h3 class="container p-3 my-3 border">Education</h3>
+    </nav>
+
+    <div class="container p-3 mb-2 border jumbotron-fluid" id="header">
+        <div class="container pt-2">
+            <h1 id="title" class="p-1 light">Josh Tang</h1>
+            <p class="subtitle">11 Malcolm Drive, Surbiton, Surrey, KT6 6QS</p>
+            <p class="subtitle">Mobile: 07759097416 | jt17819@alumni.bristol.ac.uk</p>
+
+            <form action="https://github.com/jt17819" target="_blank">
+                <div class="center-btn">
+                    <button id="github-button" class="btn btn-dark btn-social btn-github">
+                        <i class="fab fa-github"></i> Github
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+    <div class="container p-3 my-3 border">
+        <h3 id="Education">Education</h3>
         <div class="silver-box">
             <div class="row">
-                <div class="col">
+                <div class="col-sm-12 col-md-6">
                     <h5>MSci Phsics, The University of Bristol <span style="float: right;">2017-2021</span></h5>
                     <ul>
                         <li>Degree Class: 2:1</li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-md-6">
                     <h5>St Georges College, Weybridge, KT15 2QS <span style="float: right;">2010-2017</span></h5>
                     <ul>
                         <li>A-Levels: Maths(A); Physics(A); Chemistry(A)</li>
@@ -70,53 +95,112 @@
                 </div>
             </div>
         </div>
-        <h3 id='Experience'>Work Experience, Volunteering  & Intership</h3>
+    </div>
+    <div class="container p-3 my-3 border">
+        <h3 id='Experience'>Work Experience, Volunteering & Intership</h3>
         <ul>
             <li>I can use HTML</li>
             <li>This is my website</li>
         </ul>
-        <h3>Skills & Interests</h3>
-        
-        <h3>Projects</h3>
+    </div>
+
+    <div class="container p-3 my-3 border">
+        <h3 id="Skills">Skills</h3>
+        <div class="row skillsBtn">
+            <div class="col-md-4"><button type="button" data-toggle="collapse" data-target="#frontEndTab"
+                    aria-expanded="false" aria-controls="tbl" class="btn btn-primary skillsBtn"><i
+                        class="fas fa-code"></i> | Frontend</button>
+                <div>&nbsp;</div>
+                <div class="collapse" id="frontEndTab">
+                    <div class="container">
+                        <div class="card card-body">
+                            <ul class="skillsList">
+                                <li><i class="fab fa-html5 fa-2x"></i> HTML</li>
+                                <li><i class="fab fa-css3-alt fa-2x"></i> CSS</li>
+                                <li><i class="fab fa-js fa-2x"></i> JavaScript</li>
+                                <li><i class="fab fa-react fa-2x"></i> React</li>
+                            </ul>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4"><button type="button" data-toggle="collapse" data-target="#backEndTab"
+                    aria-expanded="false" aria-controls="tbl" class="btn btn-info skillsBtn"><i
+                        class="fas fa-server"></i> | Backend</button>
+                <div>&nbsp;</div>
+                <div class="collapse" id="backEndTab">
+                    <div class="container">
+                        <div class="card card-body">
+                            <ul class="skillsList">
+                                <li><img height="34px" src="./pictures/node-brands.svg" alt="node"> Express.js</li>
+                                <li><img height="34px" src="./pictures/postgresql.svg" alt="postgreSQL"> PostgreSQL</li>
+                                <li><img height="34px" src="./pictures/mongodb.svg" alt="mongodb"> MongoDB</li>
+                                <li><img height="34px" src="./pictures/django.svg" alt="django"> Django</li>
+                            </ul>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4"><button type="button" data-toggle="collapse" data-target="#generalTab"
+                    aria-expanded="false" aria-controls="tbl" class="btn btn-success skillsBtn"><i
+                        class="fas fa-user-cog"></i> | General</button>
+                <div>&nbsp;</div>
+                <div class="collapse" id="generalTab">
+                    <div class="container">
+                        <div class="card card-body">
+                            <ul class="skillsList">
+                                <li><img height="34px" src="./pictures/docker.svg" alt="docker"> Docker</li>
+                                <li><img height="34px" src="./pictures/jest.svg" alt="jest"> Jest</li>
+                                <li><img height="34px" src="./pictures/node-brands.svg" alt="node"></i> Node</li>
+                                <li><img height="34px" src="./pictures/vscode.svg" alt="vscode"> VSCode</li>
+                            </ul>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container p-3 my-3 border">
+        <h3 id="Projects">Projects</h3>
         <div class="container">
             <div class="row mt-4">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="flip-div">
-                        <div class="flip-main">
-                            <div class="front">
-                                <div class="card">
+                    <div class="flip-div h-100">
+                        <div class="flip-main h-100">
+                            <div class="front h-100">
+                                <div id="project1" class="card projectCard h-100">
                                     <div class="card-body text-center pb-2">
-                                        <p><img class="rounded-circle" src="pictures/snappy.png"></p>
+                                        <p><img class="projectImg rounded-circle" src="pictures/snappy.png"></p>
                                         <h5 class="card-title"><strong>Snappy</strong></h5>
-                                        <p class="card-text">First project creating an anonymous blogging website.</p>
-                                        <a href="#" class="btn btn-info btn-sm"><i class="fa fa-arrow-right"></i></a>
+                                        <p class="card-text">First project: An anonymous blogging website.</p>
+                                        <a href="#project1" class="btn btn-info btn-sm"><i
+                                                class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="back rounded">
-                                <div class="card">
+                            <div class="back rounded h-100 w-100">
+                                <div class="card projectCard h-100 w-100">
                                     <div class="card-body text-center">
                                         <h4 class="card-title"><strong>Snappy</strong></h4>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                        <p class="card-text">Lorem ipsum .</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                    <i class="fa fa-facebook"></i>
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://github.com/jt17819/blog-website-project">
+                                                    <i class="fab fa-github"></i>
                                                 </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                    <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                    <i class="fa fa-skype"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                    <i class="fa fa-google"></i>
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://fp-snappy.netlify.app/">
+                                                    <i class="fa fa-globe"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -127,44 +211,77 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="flip-div">
-                        <div class="flip-main">
-                            <div class="front">
-                                <div class="card">
+                    <div class="flip-div h-100">
+                        <div class="flip-main h-100">
+                            <div class="front h-100">
+                                <div id="project2" class="card projectCard h-100">
                                     <div class="card-body text-center pb-2">
-                                        <p><img class="rounded-circle" src="pictures/snappy.png"></p>
-                                        <h5 class="card-title"><strong>Project 2</strong></h5>
-                                        <p class="card-text">This is basic user profile with image, title, detail and button.</p>
-                                        <a href="#" class="btn btn-info btn-sm"><i class="fa fa-arrow-right"></i></a>
+                                        <p><img class="projectImg rounded-circle" src="pictures/snappy.png"></p>
+                                        <h5 class="card-title"><strong>Is This A Habit?</strong></h5>
+                                        <p class="card-text"><strong>Second project:</strong> A habit tracking
+                                            website.
+                                        </p>
+                                        <a href="#project2" class="btn btn-info btn-sm"><i
+                                                class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="back rounded">
-                                <div class="card">
+                            <div class="back rounded h-100 w-100">
+                                <div class="card projectCard h-100 w-100">
                                     <div class="card-body text-center">
-                                        <h4 class="card-title"><strong>Project 2</strong></h4>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation.</p>
+                                        <h4 class="card-title"><strong>Is This A Habit?</strong></h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info text-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://github.com/jt17819/Error418-WeAreATeapot">
+                                                    <i class="fab fa-github"></i>
                                                 </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://isitahabit.netlify.app/">
+                                                    <i class="fa fa-globe"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="flip-div h-100">
+                        <div class="flip-main h-100">
+                            <div class="front h-100">
+                                <div id="project3" class="card projectCard h-100">
+                                    <div class="card-body text-center pb-2">
+                                        <p><img class="projectImg rounded-circle" src="pictures/snappy.png"></p>
+                                        <h5 class="card-title"><strong>Project 3</strong></h5>
+                                        <p class="card-text">First project: An anonymous blogging website.</p>
+                                        <a href="#project3" class="btn btn-info btn-sm"><i
+                                                class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back rounded h-100 w-100">
+                                <div class="card projectCard h-100 w-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title"><strong>Snappy</strong></h4>
+                                        <p class="card-text">Lorem ipsum .</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://github.com/jt17819/blog-website-project">
+                                                    <i class="fab fa-github"></i>
                                                 </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a class="social-icon text-xs-center text-info" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
+                                                <a class="social-icon text-xs-center text-info" target="_blank"
+                                                    href="https://fp-snappy.netlify.app/">
+                                                    <i class="fa fa-globe"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -177,5 +294,7 @@
 
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
